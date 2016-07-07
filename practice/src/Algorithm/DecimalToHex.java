@@ -1,6 +1,8 @@
+package Algorithm;
+
 import java.util.Scanner;
 
-public class DeciToHex {
+public class DecimalToHex {
     public static void main(String[] args) {
         System.out.println("10진수>16진수 변환 프로그램이다");
         System.out.println("10진수를 16진수를 바꾸려면 [A] 키를 누르고,");

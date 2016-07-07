@@ -1,3 +1,5 @@
+package Algorithm;
+
 public class Boggle {
     final char[][] board = new char[][]{
             {'U','R','L','P','M'},
