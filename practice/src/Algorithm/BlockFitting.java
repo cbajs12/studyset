@@ -59,12 +59,12 @@ public class BlockFitting {
             }
         }
 
-        for(int i=0; i<MAX+1; ++i){
-            for(int j=0; j<MAX+1; ++j){
-                PositionList[i][j]= new Node();
-                Header[i][j] = new Node();
-            }
-        }
+//        for(int i=0; i<MAX+1; ++i){
+//            for(int j=0; j<MAX+1; ++j){
+//                PositionList[i][j]= new Node();
+//                Header[i][j] = new Node();
+//            }
+//        }
 
 //        for(int i=0; i<Column; ++i){
 //            for(int j=0; j<Row; ++j)
@@ -115,6 +115,7 @@ public class BlockFitting {
         }
 
         CounterBoard[p][q]++;
+        System.out.println(PositionList[p][q].getX1());
         PositionList[p][q].next = new Node();
         PositionList[p][q] = PositionList[p][q].next;
 
@@ -153,6 +154,13 @@ public class BlockFitting {
                 p = q;
             }
         }
+
+        for(int i=0; i<MAX+1; ++i){
+            for(int j=i; j<Column; ++j){
+                System.out.println();
+            }
+        }
+
     }
 
     static void increase(int n1, int n2){
