@@ -17,6 +17,7 @@ public class BlockFitting {
     static Node[][] Header = new Node[MAX+1][MAX+1];
     static int[][] CounterBoard = new int[MAX+1][MAX+1];
     static int[][] Visited = new int[MAX+1][MAX+1];
+    static int[][] Board = new int[MAX][MAX+1];
     static boolean FOUND = false;
     static int RC = 0;
     static int[][] Dir = {{-1, 0}, {0, -1}, {0, 1}, {1, 0}};
@@ -50,21 +51,21 @@ public class BlockFitting {
         Row = temp.length;
 
         Result = new int[Column][Row];
-        Map = new int[Column][Row];
+        Map = new int[MAX][MAX+1];
 
         for(int i=0; i<Column; ++i){
             temp = stringArray.get(i).split(" ");
             for(int j=0; j<Row; ++j){
-                Map[i][j]=Integer.parseInt(temp[j]);
+                Board[i][j]=Integer.parseInt(temp[j]);
             }
         }
 
-//        for(int i=0; i<MAX+1; ++i){
-//            for(int j=0; j<MAX+1; ++j){
-//                PositionList[i][j]= new Node();
-//                Header[i][j] = new Node();
-//            }
-//        }
+        for(int i=0; i<MAX+1; ++i){
+            for(int j=0; j<MAX+1; ++j){
+                PositionList[i][j]= new Node();
+                Header[i][j] = new Node();
+            }
+        }
 
 //        for(int i=0; i<Column; ++i){
 //            for(int j=0; j<Row; ++j)
@@ -97,7 +98,7 @@ public class BlockFitting {
     }
 
     static boolean out(int y, int x){
-        if((y < 0) || (x < 0) || (y > Row) || (x > Column)){
+        if((y < 0) || (x < 0) || (y > Column) || (x > Row)){
             return true;
         }else{
             return false;
@@ -115,7 +116,7 @@ public class BlockFitting {
         }
 
         CounterBoard[p][q]++;
-        System.out.println(PositionList[p][q].getX1());
+//        System.out.println(PositionList[p][q].getX1());
         PositionList[p][q].next = new Node();
         PositionList[p][q] = PositionList[p][q].next;
 
@@ -138,28 +139,28 @@ public class BlockFitting {
         }
 
         for(int i=0; i<Column; ++i){
-            p = Map[i][0];
+            p = Board[i][0];
             for(int j=1; j < Row; ++j){
-                q = Map[i][j];
+                q = Board[i][j];
                 addPositionList(p, q, i, j-1, i, j);
                 p = q;
             }
         }
 
         for(int i=0; i<Row; ++i){
-            p = Map[0][i];
+            p = Board[0][i];
             for(int j=1; j < Column; ++j){
-                q = Map[j][i];
+                q = Board[j][i];
                 addPositionList(p, q, j-1, i, j, i);
                 p = q;
             }
         }
 
-        for(int i=0; i<MAX+1; ++i){
-            for(int j=i; j<Column; ++j){
-                System.out.println();
-            }
-        }
+//        for(int i=0; i<MAX+1; ++i){
+//            for(int j=i; j<Column; ++j){
+//                System.out.println();
+//            }
+//        }
 
     }
 
@@ -248,7 +249,7 @@ public class BlockFitting {
                     continue;
 
                 if(Result[yy][xx] != 0)
-                    decrease(Map[y1][x1], Map[yy][xx]);
+                    decrease(Board[y1][x1], Board[yy][xx]);
             }
 
             for(int i=0; i<4; i++){
@@ -259,7 +260,7 @@ public class BlockFitting {
                     continue;
 
                 if(Result[yy][xx] != 0)
-                    decrease(Map[y2][x2], Map[yy][xx]);
+                    decrease(Board[y2][x2], Board[yy][xx]);
             }
 
             Res_n++;
@@ -280,7 +281,7 @@ public class BlockFitting {
                     continue;
 
                 if(Result[yy][xx] != 0)
-                    increase(Map[y1][x1], Map[yy][xx]);
+                    increase(Board[y1][x1], Board[yy][xx]);
             }
 
             for(int i=0; i<4; i++){
@@ -291,7 +292,7 @@ public class BlockFitting {
                     continue;
 
                 if(Result[yy][xx] != 0)
-                    increase(Map[y2][x2], Map[yy][xx]);
+                    increase(Board[y2][x2], Board[yy][xx]);
             }
         }
         Visited[p][q] = 0;
