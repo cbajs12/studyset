@@ -45,14 +45,14 @@ public class MoveCoin {
 
     static int findSolution(int[] number){
         int count = 0;
-        int temp = 0;
+        int total = 0;
         int average;
 
         for(int i=0; i< number.length; ++i){
-            temp = temp + number[i];
+            total = total + number[i];
         }
 
-        average = temp/number.length;
+        average = total/number.length;
 //        System.out.println(average);
 
         for(int i=0; i< number.length; ++i){
