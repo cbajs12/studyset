@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockFitting {
+public class BlockFitting_ {
     static int MAX = 100;
     static int[][] Map;
     static int[][] Result;
