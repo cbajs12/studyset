@@ -50,9 +50,9 @@ public class ChainingPrimeNumber_ {
                 for (int j = 0; prime[i - 1][j] > 0; ++j) {
                     for (int k = 0; k < 5; ++k) {
                         num = prime[i - 1][j] * 10 + 2 * k + 1;
-                        System.out.println(num);
+                        //System.out.println(num);
 
-                        if ((prime[i][x] == 0) && (checkPrime(x))) {
+                        if ((prime[i][x] == 0) && (checkPrime(num))) {
                             prime[i][x] = num;
                             x++;
                         }
