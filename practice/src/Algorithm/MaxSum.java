@@ -45,7 +45,6 @@ public class MaxSum {
     }
 
     static int findSolution(int[] array){
-        int length = (2^array.length) - 1;
         int result, sum=0;
 
         result = MIN;
