@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TruckAllocation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TruckAllocation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithm/TruckAllocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="810">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChainingPrimeNumber_.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/ChainingPrimeNumber_.java">
+      <file leaf-file-name="SymmetricMatrix.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/SymmetricMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="735">
+              <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,6 +106,7 @@
         <option value="$PROJECT_DIR$/src/Algorithm/ChainingPrimeNumber_.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/MaxSum.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/TruckAllocation.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/SymmetricMatrix.java" />
       </list>
     </option>
   </component>
@@ -711,12 +712,15 @@
       <workItem from="1469263079433" duration="120000" />
       <workItem from="1469442610973" duration="5917000" />
       <workItem from="1469450709159" duration="639000" />
-      <workItem from="1469493079538" duration="3571000" />
+      <workItem from="1469493079538" duration="4404000" />
+      <workItem from="1469584267126" duration="2362000" />
+      <workItem from="1469592485386" duration="79000" />
+      <workItem from="1469670653018" duration="1237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139813000" />
+    <option name="totallyTimeSpent" value="144324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -776,13 +780,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/PrimeNumber_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/RecursiveGcd_.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1110,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,8 +1122,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/TruckAllocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="810">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/SymmetricMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
