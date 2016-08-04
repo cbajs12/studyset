@@ -4,7 +4,7 @@ package Algorithm;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class LiftPrice {
+public class LiftPrice_ {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         String temp = scanner.nextLine().trim();
