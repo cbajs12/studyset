@@ -9,15 +9,15 @@ public class AreaSize {
         Scanner scanner = new Scanner(System.in);
         String temp = scanner.nextLine().trim();
         int number = Integer.parseInt(temp);
-        int[] result;
+        double[] result;
         int total;
-        float[][] matrix;
+        double[][] matrix;
         String[] data;
 
         if (number < 1 || number > 10)
             return;
 
-        result = new int[number];
+        result = new double[number];
         for (int i = 0; i < number; ++i) {
             temp = scanner.nextLine().trim();
             total = Integer.parseInt(temp);
@@ -25,22 +25,44 @@ public class AreaSize {
             if (total < 3 || total > 100)
                 return;
 
-            matrix = new float[total][2];
-            for(int j = 0; j < total; ++j){
+            matrix = new double[total+1][2];
+            for(int j = 1; j <= total; ++j){
                 temp = scanner.nextLine().trim();
                 data = temp.split(" ");
-                matrix[j][0] = Float.parseFloat(data[0]);
-                matrix[j][1] = Float.parseFloat(data[1]);
-
-
+                matrix[j][0] = Double.parseDouble(data[0]);
+                matrix[j][1] = Double.parseDouble(data[1]);
             }
 
+            result[i] = findSolution(matrix, total);
 
         }
 
-        for(int i : result)
+        for(double i : result)
             System.out.println(i);
 
         scanner.close();
+    }
+
+    static double findSolution(double[][] matrix, int total){
+        double result = 0.0;
+        int temp = 1;
+        double tempX, tempY;
+
+        for(int i = 2; i<=total; ++i){
+            if(matrix[temp][1] - matrix[i][1] > 0 || (matrix[temp][1] - matrix[i][1] == 0 && matrix[temp][0] > matrix[i][0]))
+                temp = i;
+        }
+
+        tempX = matrix[temp][0];
+        tempY = matrix[temp][1];
+        matrix[temp] = matrix[1];
+        matrix[1][0] = tempX;
+        matrix[1][1] = tempY;
+
+        for(int i = 2; i < total; ++i){
+            temp = i;
+        }
+
+        return result;
     }
 }
