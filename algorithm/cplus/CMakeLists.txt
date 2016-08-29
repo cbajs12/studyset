@@ -3,6 +3,6 @@ project(cplus)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES:wq)
+set(SOURCE_FILES:)
 
-add_executable(cplus ${SOURCE_FILES})
+add_executable(cplus ${SOURCE_FILES} Canibalism.cpp Canibalism.h)
