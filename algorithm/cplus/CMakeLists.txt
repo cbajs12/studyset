@@ -5,4 +5,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES:)
 
-add_executable(cplus ${SOURCE_FILES} LongCommonSequence.cpp LongCommonSequence.h)
+add_executable(cplus ${SOURCE_FILES} MapSolver.cpp MapSolver.h MapSolverMain.cpp)
